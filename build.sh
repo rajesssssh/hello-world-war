@@ -6,3 +6,4 @@ fi
 mvn clean package
 echo "rajesh"
 echo "rajesh"
+echo "rajesh"
