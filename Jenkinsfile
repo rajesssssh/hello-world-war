@@ -14,9 +14,5 @@ pipeline {
 				sh 'mvn clean pacakge'
             }
         }
-        stage('Deploy') {
-            steps {
-		
-	    }
-	}
 }
+        
