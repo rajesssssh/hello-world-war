@@ -7,7 +7,8 @@ pipeline {
 				sh 'git clone https://github.com/rajesssssh/hello-world-war.git'
             }
         }
-		stage('checkout') {
+    }
+		stage('build') {
             steps {
                 sh 'cd hello-world-war'
 				sh 'mvn clean pacakge'
@@ -17,3 +18,7 @@ pipeline {
             steps {
                 sshagent(['001']) {
 				    sh 'rm -rf hello-world-war-1.0.0war'
+		}
+	    }
+	}
+}
