@@ -16,9 +16,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                sshagent(['001']) {
-				    sh 'rm -rf hello-world-war-1.0.0war'
-		}
+		
 	    }
 	}
 }
