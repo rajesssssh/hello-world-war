@@ -4,7 +4,7 @@ pipeline {
         stage('checkout') {
             steps {
                 sh 'rm -rf hello-world-war'
-				sh 'git clone https://github.com/santhosh0811/hello-world-war.git'
+				sh 'git clone https://github.com/rajesssssh/hello-world-war.git'
             }
         }
 		stage('checkout') {
@@ -15,5 +15,5 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                sshagent(['0014']) {
+                sshagent(['001']) {
 				    sh 'rm -rf hello-world-war-1.0.0war'
