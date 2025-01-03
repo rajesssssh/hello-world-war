@@ -1,15 +1,17 @@
 pipeline {
-    agent any 
+        agent { label 'slave2' }
     stages {
-        stage('checkout') {
+        stage('Checkout') {
             steps {
-                sh 'git clone https://github.com/rajesssssh/hello-world-war.git'
+               sh 'rm -rf hello-world-war'
+               sh 'git clone https:///'
             }
         }
-        stage('build') {
+        stage('Build') {
             steps {
-                sh 'mvn clean package'
+                sh 'mvn clean install'
             }
         }
-    }
-}
+             stage('Deploy') {
+            steps {
+                sh 'cp /opt/jenkins/workspace/jenkinsjob1/target/hello-world-war-1.0
