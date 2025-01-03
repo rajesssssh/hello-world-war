@@ -16,7 +16,7 @@ pipeline {
             steps {
                 sh 'scp /opt/jenkins/workspace/pipeline_job3/target/hello-world-war-1.0.0.war root@172.31.37.174:/opt/apache-tomcat-10.1.34/webapps/'
             }
-                        }  
+                          
 post {
     success {
         mail to: "rajesh0807r@gmail.com",
@@ -30,6 +30,7 @@ post {
     }
 }
     }
+}
 }
 
             
